@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Cristalográfico</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    
+    <!-- Panel izquierdo -->
+    <aside class="panel left-panel">
+      <h1>Simulador Cristalográfico</h1>
+      <h2>Propiedades del material</h2>
+
+      <div class="info-card">
+        <p><strong>Elemento:</strong> <span id="propElement">-</span></p>
+        <p><strong>Símbolo:</strong> <span id="propSymbol">-</span></p>
+        <p><strong>Estructura:</strong> <span id="propStructure">-</span></p>
+        <p><strong>Masa de un átomo:</strong> <span id="propMass">-</span></p>
+        <p><strong>Densidad teórica:</strong> <span id="propDensity">-</span></p>
+        <p><strong>Parámetro de red:</strong> <span id="propLattice">-</span></p>
+        <p><strong>Radio atómico:</strong> <span id="propRadius">-</span></p>
+      </div>
+    </aside>
+
+    <!-- Centro -->
+    <main class="viewer-section">
+      <div id="viewer"></div>
+    </main>
+
+    <!-- Panel derecho -->
+    <aside class="panel right-panel">
+      <h2>Seleccionar elemento</h2>
+
+      <div class="selector-card">
+        <label for="elementSelect">Elemento:</label>
+        <select id="elementSelect">
+          <option value="Fe">Hierro (Fe)</option>
+          <option value="Cu">Cobre (Cu)</option>
+          <option value="Al">Aluminio (Al)</option>
+          <option value="Ni">Níquel (Ni)</option>
+          <option value="Ag">Plata (Ag)</option>
+          <option value="Au">Oro (Au)</option>
+          <option value="W">Tungsteno (W)</option>
+          <option value="Pb">Plomo (Pb)</option>
+        </select>
+      </div>
+
+      <div class="legend-card">
+        <h3>Leyenda</h3>
+        <p><span class="dot blue"></span> Esquinas</p>
+        <p><span class="dot red"></span> Centro del cuerpo</p>
+        <p><span class="dot green"></span> Centro de caras</p>
+        </div>
+    </aside>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
